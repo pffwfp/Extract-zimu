@@ -26,7 +26,7 @@ export const UrlInputArea: React.FC<UrlInputAreaProps> = ({ onSubmit, disabled }
         Paste Bilibili Video URL
       </h3>
       <p className="text-slate-400 max-w-md mb-8">
-        We will attempt to fetch existing CC subtitles from the video link and translate them.
+        We will attempt to fetch existing subtitles (CC or AI-generated) directly from the video link.
       </p>
 
       <form onSubmit={handleSubmit} className="w-full max-w-lg relative">
@@ -52,7 +52,7 @@ export const UrlInputArea: React.FC<UrlInputAreaProps> = ({ onSubmit, disabled }
       
       <div className="mt-6 flex flex-col gap-2 text-xs text-slate-500">
         <p>Supported format: https://www.bilibili.com/video/BV...</p>
-        <p className="opacity-70">Note: Only works for videos that already have CC subtitles.</p>
+        <p className="opacity-70">Supports creator-uploaded CC and Bilibili's AI-generated subtitles.</p>
       </div>
     </div>
   );

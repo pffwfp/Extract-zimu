@@ -116,13 +116,13 @@ export const processRawTextWithGemini = async (
               
               Raw Data:
               \`\`\`
-              ${rawText.slice(0, 50000)} 
+              ${rawText.slice(0, 1000000)} 
               \`\`\`
-              (Input truncated to first 50k chars)
+              (Input truncated to first 1M chars)
 
               Task:
               1. Parse this data to extract dialogue lines and timestamps.
-                 - If it is Bilibili JSON, look for 'from' (start time) and 'content' fields. 'from' is usually in seconds. Convert to HH:MM:SS,mmm.
+                 - If it is Bilibili JSON, look for 'body' array containing objects with 'from', 'to', and 'content' fields. 'from' is in seconds. Convert to HH:MM:SS,mmm.
                  - If it is XML, look for 'd' attributes (timestamp) and text content.
               2. Translate the extracted Chinese text to English.
               3. If existing English subtitles are present in the JSON, use them as reference but ensure they are natural.
