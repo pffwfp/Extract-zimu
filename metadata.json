@@ -1,0 +1,5 @@
+{
+  "name": "BiliSub AI - Subtitle Extractor",
+  "description": "A powerful tool to extract, transcribe, and translate subtitles from Bilibili videos using Gemini AI. Supports video upload and raw XML processing.",
+  "requestFramePermissions": []
+}
